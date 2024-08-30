@@ -19,6 +19,8 @@ class Clean_and_Merge(BaseEstimator,TransformerMixin):
             'vision', 'penalties', 'marking', 'standing_tackle', 'sliding_tackle',
             'gk_diving', 'gk_handling', 'gk_kicking', 'gk_positioning',
             'gk_reflexes']
+        df[numercial_attributes] = df[numercial_attributes].apply(pd.to_numeric, errors='coerce')
+
         player_id=df['player_fifa_api_id'].unique()
         new_df=pd.DataFrame()
 
