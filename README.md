@@ -1,0 +1,1 @@
+## End to end creating aml project for Football Player Score Prediction
